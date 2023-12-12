@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Operacional</title>
+    <style>
+        /* Adiciona uma classe para ocultar os parágrafos por padrão */
+        article p {
+            display: none;
+        }
+
+        /* Mostra o parágrafo quando o artigo tem a classe 'show' */
+        article.show p {
+            display: block;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #content-wrapper {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        #main-heading {
+            text-align: center;
+            color: #070105;
+        }
+
+        article {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: white;
+            cursor: pointer; /* Adiciona um cursor indicando que é clicável */
+        }
+
+        /* Adiciona estilo ao título (h2) para indicar que é clicável */
+        article h2 {
+            margin-bottom: 0; /* Remove a margem inferior do título */
+        }
+
+        #main-heading:hover + article.show p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-heading">Explorando Temas de Sistema Operacional</h1>
+
+    <video id="background-video" autoplay muted loop>
+        <source src="network_-_12716 (1080p).mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <article id="article1" onmouseover="toggleArticle(this)">
+        <h2>Tema 1: Exigências do sistema operativo quanto às capacidades do equipamento</h2>
+        <p>Neste tema, discutimos detalhadamente os requisitos que um sistema operacional (SO) pode impor ao hardware do dispositivo. Isso inclui informações específicas sobre o processador, a quantidade de memória RAM, o espaço em disco e outros recursos essenciais para garantir o desempenho adequado do SO.</p>
+    </article>
+
+    <article id="article2" onmouseover="toggleArticle(this)">
+        <h2>Tema 2: Instalação do SO a partir de periféricos</h2>
+        <p>Aqui, exploramos a capacidade do sistema operacional ser instalado por meio de diferentes periféricos, como USB, CD/DVD ou redes. Examina as opções disponíveis para instalação através desses dispositivos externos, proporcionando flexibilidade ao usuário.</p>
+    </article>
+
+    <article id="article3" onmouseover="toggleArticle(this)">
+        <h2>Tema 3: Seleção de opções na instalação</h2>
+        <p>No processo de instalação do SO, os usuários frequentemente deparam-se com escolhas importantes, como a seleção do idioma, o tipo de instalação (personalizada, típica, etc.) e outras opções específicas que moldam a configuração inicial do sistema. Este tema explora essas escolhas e seu impacto.</p>
+    </article>
+
+    <article id="article4" onmouseover="toggleArticle(this)">
+        <h2>Tema 4: Definição do plano de configuração de periféricos</h2>
+        <p>Este tópico aborda a configuração de periféricos, tais como impressoras, scanners e dispositivos de armazenamento externo, no contexto do sistema operacional. Examina como esses dispositivos são integrados ao sistema, permitindo um ambiente mais fluido e eficiente.</p>
+    </article>
+
+    <article id="article5" onmouseover="toggleArticle(this)">
+        <h2>Tema 5: Definição do modelo de logins</h2>
+        <p>Refere-se à configuração da autenticação no sistema operacional, incluindo a implementação de logins e senhas. Este tema aborda aspectos cruciais de segurança e personalização, garantindo que o acesso ao sistema seja controlado e seguro para os usuários.</p>
+    </article>
+
+    <article id="article6" onmouseover="toggleArticle(this)">
+        <h2>Tema 6: Configuração do SO de acordo com as necessidades de cada utilizador</h2>
+        <p>Este tópico trata da personalização do sistema operacional para atender às preferências e necessidades individuais de cada usuário. Inclui ajustes de interface, configurações de usuário, temas visuais e outras personalizações que tornam a experiência do usuário mais agradável e eficiente.</p>
+    </article>
+
+    <article id="article7" onmouseover="toggleArticle(this)">
+        <h2>Tema 7: Manutenção do SO por alteração da configuração do equipamento</h2>
+        <p>Aborda a capacidade do sistema operacional de ser atualizado e mantido através de alterações na configuração do hardware. Explora como o SO se adapta a mudanças no equipamento, garantindo um desempenho contínuo e eficiente ao longo do tempo. Inclui informações sobre atualizações de drivers, configurações de energia e otimizações de desempenho.</p>
+    </article>
+
+    <script>
+        function toggleArticle(article) {
+            article.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
